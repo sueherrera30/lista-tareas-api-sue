@@ -28,12 +28,24 @@ var crearTarea = function(tarea){
 			/*creamos la celda del estado*/
 			var $estadoTd =$("<td/>");
 			$estadoTd.text(estado);
-			/*agregamos celda a la fila */
+	        /*celda de opciones*/
+	        var $opcionesTd =$("<td/>"); 
+	        var $iconoVer = $("<span/>",{"class":"glyphicon glyphicon-trash" });
+			var $iconoLapiz = $("<span/>",{"class":"glyphicon glyphicon-pencil" });
+	        var $iconoEliminar = $("<span/>",{"class":"glyphicon glyphicon-eye-open" });
+	        $opcionesTd.append($iconoVer);
+	        $opcionesTd.append($iconoEliminar);
+	        $opcionesTd.append($iconoLapiz)
+			
 			$tr.append($nombreTd);
 			$tr.append($estadoTd);
+	        $tr.append($opcionesTd);
 			$taskList.append($tr);
+	        
+	 
+			
+	        
 };
-
 
 /*funcion de agregar tarea nueva*/
 var agregarTarea = function(e){

@@ -32,9 +32,8 @@ var crearTarea = function(tarea){
 			$tr.append($nombreTd);
 			$tr.append($estadoTd);
 			$taskList.append($tr);
-	        /*agregamos iconos a la celda*/
-	      
 };
+
 
 /*funcion de agregar tarea nueva*/
 var agregarTarea = function(e){
